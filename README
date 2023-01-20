@@ -1,0 +1,7 @@
+# replace YOUR_SCRIPT_FOLDER and YOUR_DATA_FOLDER with your path
+
+# to run spark cluster
+docker-compose -f .\docker-compose.yml up
+
+# to submit job
+docker-compose exec spark spark-submit --master spark://master:7077 --py-files /scripts/my_script.py /scripts/my_script.py
